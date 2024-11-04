@@ -65,30 +65,34 @@
         .gif {
             display: none;
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            width: 100px; /* Adjust size as needed */
+            height: auto;
+            transition: opacity 0.3s;
         }
     </style>
 </head>
 <body>
-    <button class="connect-button" onclick="showGif()">Connect</button>
+    <button class="connect-button">Connect</button>
     <div class="footer">
         Made by Droopy
         <div class="tooltip">Get tapped kid</div>
     </div>
-    <img class="gif" id="gif" src="https://steamuserimages-a.akamaihd.net/ugc/2030614368904612202/7567FF1DDAE4A7517CDF391985C0A830BB815FAB/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false" alt="GIF" />
+    <img class="gif" id="gif" src="https://s6.ezgif.com/tmp/ezgif-6-22ba71fcbd.gif" alt="GIF" />
 
     <script>
-        function showGif() {
+        document.body.addEventListener('click', function(event) {
             const gif = document.getElementById('gif');
             gif.style.display = 'block';
+            gif.style.left = event.pageX + 'px';
+            gif.style.top = event.pageY + 'px';
+            gif.style.opacity = '1';
             setTimeout(() => {
-                gif.style.display = 'none';
+                gif.style.opacity = '0';
+                setTimeout(() => {
+                    gif.style.display = 'none';
+                }, 300);
             }, 2000);
-        }
-
-        document.body.addEventListener('click', showGif);
+        });
     </script>
 </body>
 </html>

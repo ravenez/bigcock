@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .connect-button {
+            padding: 20px 40px;
+            font-size: 24px;
+            color: white;
+            background-color: transparent;
+            border: 2px solid white;
+            cursor: pointer;
+            transition: background-color 0.5s;
+        }
+        .connect-button:hover {
+            animation: rainbow 1s infinite;
+        }
+        @keyframes rainbow {
+            0% { background-color: red; }
+            14% { background-color: orange; }
+            28% { background-color: yellow; }
+            42% { background-color: green; }
+            57% { background-color: blue; }
+            71% { background-color: indigo; }
+            85% { background-color: violet; }
+            100% { background-color: red; }
+        }
+    </style>
+</head>
+<body>
+    <button class="connect-button" onclick="window.location.href='https://www.youtube.com'">Connect</button>
+</body>
+</html>

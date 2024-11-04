@@ -16,13 +16,16 @@
         .connect-button {
             padding: 20px 40px;
             font-size: 24px;
-            color: transparent;
+            color: white;
             background-color: transparent;
             border: none;
             cursor: pointer;
-            transition: color 0.5s;
+            transition: transform 0.3s, color 0.5s;
             background-clip: text;
             -webkit-background-clip: text;
+        }
+        .connect-button:hover {
+            transform: scale(1.1);
             animation: rainbow 1s infinite;
         }
         @keyframes rainbow {

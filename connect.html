@@ -16,24 +16,24 @@
         .connect-button {
             padding: 20px 40px;
             font-size: 24px;
-            color: white;
+            color: transparent;
             background-color: transparent;
-            border: 2px solid white;
+            border: none;
             cursor: pointer;
-            transition: background-color 0.5s;
-        }
-        .connect-button:hover {
+            transition: color 0.5s;
+            background-clip: text;
+            -webkit-background-clip: text;
             animation: rainbow 1s infinite;
         }
         @keyframes rainbow {
-            0% { background-color: red; }
-            14% { background-color: orange; }
-            28% { background-color: yellow; }
-            42% { background-color: green; }
-            57% { background-color: blue; }
-            71% { background-color: indigo; }
-            85% { background-color: violet; }
-            100% { background-color: red; }
+            0% { color: red; }
+            14% { color: orange; }
+            28% { color: yellow; }
+            42% { color: green; }
+            57% { color: blue; }
+            71% { color: indigo; }
+            85% { color: violet; }
+            100% { color: red; }
         }
     </style>
 </head>
